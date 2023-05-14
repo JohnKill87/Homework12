@@ -28,10 +28,10 @@ public class Book {
             return false;
         }
         Book bookName = (Book) other;
-        return bookName.equals(bookName.bookName);
+        return bookName.equals((bookName.bookName) + author.equals(bookName.author));
     }
     public int hashCode() {
-        return java.util.Objects.hash(bookName);
+        return java.util.Objects.hash(bookName,author);
     }
     public String toString() {
         return "Название книги - " + this.bookName + " Автор - " + this.author + " Год публикации - " + this.age;

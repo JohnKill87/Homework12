@@ -19,10 +19,10 @@ public class Author {
             return false;
         }
         Author author = (Author) other;
-        return authorName.equals(author.authorName);
+        return authorName.equals((author.authorName) + authorLastName.equals(author.authorLastName));
     }
     public int hashCode() {
-        return java.util.Objects.hash(authorName);
+        return java.util.Objects.hash(authorName,authorLastName);
     }
     public String toString() {
         return "Имя - " + this.authorName + " Фамилия - " + this.authorLastName;
