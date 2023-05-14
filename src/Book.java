@@ -28,7 +28,7 @@ public class Book {
             return false;
         }
         Book bookName = (Book) other;
-        return bookName.equals((bookName.bookName) + author.equals(bookName.author));
+        return bookName.equals(bookName.bookName + author.equals(bookName.author));
     }
     public int hashCode() {
         return java.util.Objects.hash(bookName,author);
